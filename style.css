@@ -497,9 +497,17 @@ body.dark-mode .project-card {
     transition: transform 0.3s;
 }
 
-.workshop-card img:hover {
-    transform: scale(1.05);
+.workshop-image {
+    width: 100%; /* لضبط العرض بشكل كامل */
+    max-width: 400px; /* الحد الأقصى للعرض */
+    height: auto; /* لتجنب تشويه الصورة */
+    transition: transform 0.3s ease; /* لإضافة تأثير عند التحريك */
 }
+
+.workshop-image:hover {
+    transform: scale(1.1); /* تكبير الصورة عند التمرير */
+}
+
 
 
 
@@ -548,3 +556,194 @@ body.dark-mode .main h3 {
 body.dark-mode .social-icons a {
     color: #ffffff; 
 }
+.ai-workforce {
+    background-color: #f0f4f8;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.ai-workforce .section-title {
+    font-size: 2em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ai-workforce .intro {
+    font-size: 1.2em;
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ai-workforce .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+@media (max-width: 1023px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    .navigation a {
+        padding-left: 10px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .main-content h2 {
+        font-size: 1em;
+    }
+
+    .main-content h3 {
+        font-size: 1.6em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 641px) {
+    body {
+        font-size: 12px;
+    }
+
+    .main-content h2 {
+        font-size: 0.8em;
+    }
+
+    .main-content h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 300px) {
+    body {
+        font-size: 10px;
+    }
+}
+.ai-workforce .content .challenges,
+.ai-workforce .content .solutions {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
+    max-width: 500px;
+}
+
+.ai-workforce .content h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.ai-workforce .content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.ai-workforce .content ul li {
+    font-size: 1.1em;
+    color: #34495e;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.ai-workforce .content ul li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #27ae60;
+    font-size: 1.2em;
+}
+/* تنسيق الورش التدريبية */
+.workshop {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f0f4f8;
+}
+
+.workshop .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.workshop .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* عرض 4 أعمدة في الشاشات الكبيرة */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.workshop-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.workshop-card:hover {
+    transform: scale(1.05); /* تكبير العنصر عند التمرير */
+}
+
+.workshop-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.workshop-card .card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.workshop-card .card-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.workshop-card .card-content p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* تخصيصات للأجهزة الصغيرة (مثل الهواتف) */
+@media (max-width: 1024px) {
+    .workshop .content {
+        grid-template-columns: repeat(2, 1fr); /* عرض عمودين في الشاشات المتوسطة */
+    }
+}
+
+@media (max-width: 640px) {
+    .workshop .title {
+        font-size: 1.5rem; /* تقليل حجم العنوان */
+    }
+
+    .workshop .content {
+        grid-template-columns: 1fr; /* عرض عمود واحد في الشاشات الصغيرة */
+    }
+
+    .workshop-card .card-content h3 {
+        font-size: 1.1rem; /* تقليل حجم النص في الورشة */
+    }
+
+    .workshop-card .card-content p {
+        font-size: 0.9rem; /* تقليل حجم النص في الورشة */
+    }
+}
+
